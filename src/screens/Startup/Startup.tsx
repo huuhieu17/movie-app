@@ -10,6 +10,7 @@ import { Paths } from '@/navigation/paths';
 
 import { AssetByVariant } from '@/components/atoms';
 import { SafeScreen } from '@/components/templates';
+import React from 'react';
 
 function Startup({ navigation }: RootScreenProps<Paths.Startup>) {
   const { fonts, gutters, layout } = useTheme();

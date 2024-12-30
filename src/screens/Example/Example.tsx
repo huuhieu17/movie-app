@@ -7,6 +7,7 @@ import { useI18n, useUser } from '@/hooks';
 
 import { AssetByVariant, IconByVariant, Skeleton } from '@/components/atoms';
 import { SafeScreen } from '@/components/templates';
+import React from 'react';
 
 function Example() {
   const { t } = useTranslation();
