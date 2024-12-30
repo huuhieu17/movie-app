@@ -8,6 +8,7 @@ import { useTheme } from '@/theme';
 import { Paths } from '@/navigation/paths';
 
 import { Example, Startup } from '@/screens';
+import React from 'react';
 
 const Stack = createStackNavigator<RootStackParamList>();
 

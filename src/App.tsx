@@ -8,6 +8,10 @@ import { ThemeProvider } from '@/theme';
 import ApplicationNavigator from '@/navigation/Application';
 
 import '@/translations';
+import React from 'react';
+import { PaperProvider } from 'react-native-paper';
+import { Provider } from 'react-redux';
+import { store } from './stores';
 
 export const queryClient = new QueryClient({
   defaultOptions: {
@@ -26,9 +30,13 @@ function App() {
   return (
     <GestureHandlerRootView>
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider storage={storage}>
-          <ApplicationNavigator />
-        </ThemeProvider>
+        <Provider store={store}>
+          <ThemeProvider storage={storage}>
+            <PaperProvider>
+              <ApplicationNavigator />
+            </PaperProvider>
+          </ThemeProvider>
+        </Provider>
       </QueryClientProvider>
     </GestureHandlerRootView>
   );

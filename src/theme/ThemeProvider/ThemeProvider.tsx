@@ -6,7 +6,7 @@ import type {
 } from '@/theme/types/config';
 import type { ComponentTheme, Theme } from '@/theme/types/theme';
 
-import {
+import React, {
   createContext,
   useCallback,
   useEffect,
